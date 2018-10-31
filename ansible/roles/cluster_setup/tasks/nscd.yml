@@ -1,0 +1,11 @@
+---
+- name: Ensure nscd packages are installed
+  yum:
+    name: nscd
+    state: present
+
+- name: Ensure nscd is enabled
+  service:
+    name: nscd
+    state: started
+    enabled: yes
